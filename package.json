@@ -1,41 +1,12 @@
 {
-  "name": "fresh-deps-mcp",
-  "version": "0.1.0",
-  "description": "MCP server that tells Claude the real, current state of packages: latest versions, deprecations and known vulnerabilities. No API key.",
-  "type": "module",
-  "bin": {
-    "fresh-deps-mcp": "dist/index.js"
-  },
-  "files": [
-    "dist"
+  "name": "claude-mcp-build",
+  "private": true,
+  "workspaces": [
+    "packages/fresh-deps",
+    "packages/finishline"
   ],
   "scripts": {
-    "build": "tsc",
-    "start": "node dist/index.js",
-    "smoke": "node scripts/smoke.mjs"
-  },
-  "keywords": [
-    "mcp",
-    "model-context-protocol",
-    "claude",
-    "npm",
-    "pypi",
-    "dependencies",
-    "osv",
-    "vulnerabilities"
-  ],
-  "license": "MIT",
-  "engines": {
-    "node": ">=18"
-  },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.32.2",
-    "semver": "^7.7.0",
-    "zod": "^4.0.0"
-  },
-  "devDependencies": {
-    "@types/node": "^22.0.0",
-    "@types/semver": "^7.7.0",
-    "typescript": "^5.9.0"
+    "build": "npm run build --workspaces",
+    "smoke": "npm run smoke --workspaces"
   }
 }
