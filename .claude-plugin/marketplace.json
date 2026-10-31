@@ -1,0 +1,14 @@
+{
+  "name": "hyunaeee-mcp",
+  "description": "MCP servers and plugins that help Claude finish real projects",
+  "owner": {
+    "name": "hyunaeee"
+  },
+  "plugins": [
+    {
+      "name": "finishline",
+      "source": "./plugins/finishline",
+      "description": "A project manager that gets your projects finished: opens every session with the next action, parks scope creep, flags stalls, checks ship readiness, and shows a live dashboard."
+    }
+  ]
+}

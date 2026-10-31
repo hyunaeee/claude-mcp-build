@@ -12,7 +12,8 @@
   "scripts": {
     "build": "tsc",
     "start": "node dist/index.js",
-    "smoke": "node scripts/smoke.mjs"
+    "smoke": "node scripts/smoke.mjs",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "mcp",
@@ -45,5 +46,7 @@
     "type": "git",
     "url": "https://github.com/hyunaeee/claude-mcp-build",
     "directory": "packages/fresh-deps"
-  }
+  },
+  "homepage": "https://github.com/hyunaeee/claude-mcp-build/tree/main/packages/fresh-deps",
+  "author": "hyunaeee"
 }

@@ -1,0 +1,12 @@
+{
+  "name": "finishline",
+  "version": "0.1.0",
+  "description": "A project manager that gets your projects finished: opens every session with the next action, parks scope creep, flags stalls, checks ship readiness, and shows a live dashboard.",
+  "author": {
+    "name": "hyunaeee"
+  },
+  "homepage": "https://github.com/hyunaeee/claude-mcp-build/tree/main/packages/finishline",
+  "repository": "https://github.com/hyunaeee/claude-mcp-build",
+  "license": "MIT",
+  "keywords": ["project-management", "productivity", "mcp", "dashboard"]
+}

@@ -4,6 +4,7 @@ import { join } from "node:path";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
+import { sessionStartHook } from "./hook.js";
 import { buildStatus, formatStatus } from "./manager.js";
 import { shipCheck } from "./shipcheck.js";
 import { loadState, log, newId, projectDir, requireState, saveState, stateDir, type State, type Task } from "./state.js";
@@ -303,4 +304,8 @@ async function statusResult(dir: string, state: State, lead?: string) {
   return { content: [{ type: "text" as const, text }], structuredContent: v as unknown as Record<string, unknown> };
 }
 
-await server.connect(new StdioServerTransport());
+if (process.argv.includes("--session-start")) {
+  await sessionStartHook();
+} else {
+  await server.connect(new StdioServerTransport());
+}

@@ -12,7 +12,8 @@
   "scripts": {
     "build": "tsc",
     "start": "node dist/index.js",
-    "smoke": "node scripts/smoke.mjs"
+    "smoke": "node scripts/smoke.mjs",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "mcp",
@@ -40,5 +41,7 @@
   "devDependencies": {
     "@types/node": "^22.0.0",
     "typescript": "^5.9.0"
-  }
+  },
+  "homepage": "https://github.com/hyunaeee/claude-mcp-build/tree/main/packages/finishline",
+  "author": "hyunaeee"
 }

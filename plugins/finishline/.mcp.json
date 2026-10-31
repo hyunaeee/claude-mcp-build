@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "finishline": {
+      "command": "npx",
+      "args": ["-y", "finishline-mcp@0"]
+    }
+  }
+}

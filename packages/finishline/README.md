@@ -7,7 +7,7 @@ that silently drags on for a week, and the boring last 20% (README, tests, deplo
 for. finishline gives Claude a manager's job: keep one clear next action in front of you, park
 distractions, notice when you're stuck, and walk you through shipping.
 
-![finishline dashboard](docs/dashboard.png)
+![finishline dashboard](https://raw.githubusercontent.com/hyunaeee/claude-mcp-build/main/packages/finishline/docs/dashboard.png)
 
 ## What it does
 
@@ -26,7 +26,15 @@ The plan lives in `.finishline/state.json` in your repo. It's plain JSON, so you
 
 ## Install
 
-**Claude Code** (run inside your project folder)
+**Claude Code plugin (recommended).** It installs the MCP server plus a session-start hook, so every
+session opens already knowing where the project stands and what to do next. You never have to ask.
+
+```
+/plugin marketplace add hyunaeee/claude-mcp-build
+/plugin install finishline@hyunaeee-mcp
+```
+
+**Claude Code, MCP server only** (run inside your project folder)
 
 ```bash
 claude mcp add finishline -- npx -y finishline-mcp
